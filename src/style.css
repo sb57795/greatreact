@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e7e7e7;
+}
+
+input {
+    padding: 5px;
+    width: 80%;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #007bff;
+}
+ .word-card{
+    width: 326px;
+	height: 417px;
+	flex-shrink: 0;
+	top: 50%;
+	left: 50%;
+	margin: 0 auto;
+	
+    border-radius: 10px 0px 0px 0px;
+	background: rgb(213, 212, 212);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ }
+ button{
+    width: 200px;
+	height: 41px;
+    text-align: center;
+	flex-shrink: 0;
+	border-radius: 22px;
+	background: #44c861;
+	margin-top: 7px;
+    
+   
+ }
