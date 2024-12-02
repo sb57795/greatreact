@@ -1,12 +1,14 @@
+
+//import WordCard from "./cardtranslate";
+import CardList from "./card";
 import WordList from "./main";
-import WordCard from "./cardtranslate";
-
-
+import WordSlider from "./card";
 function App() {
   return (
-      <WordList/>,
-      <div>
-        <WordCard/>
+    <div>
+      <WordList/>
+      <WordSlider/>
+     
       </div>
   
       );

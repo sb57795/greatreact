@@ -1,8 +1,7 @@
 
-import './style.css';
 import React, { useState } from 'react';
 
-const WordCard = () => {
+function WordCard  (props) {
     const [isTranslationVisible, setIsTranslationVisible] = useState(false);
 
     const handleShowTranslation = () => {
@@ -10,12 +9,10 @@ const WordCard = () => {
     };
 
     return (
-        <div class="word-card">
-            <h1>Stork</h1>
-            <h2>sto:k</h2>
-            
+        <div className="word-card">
+            <h2>{props.word}</h2>
             {isTranslationVisible ? (
-                <p>Аист</p>
+                <p>{props.translate}</p>
             ) : (
                 <button onClick={handleShowTranslation}>Показать перевод</button>
             )}
@@ -24,3 +21,22 @@ const WordCard = () => {
 };
 
 export default WordCard;
+
+
+
+/*function Card(props) {
+
+
+
+    return (
+        <div className="word-card">
+            
+                
+                <h4 className="card-title">{props.title}</h4>
+                <p className="card-text">{props.description}</p>
+            
+            
+            </div>
+    );
+}
+export default Card*/
