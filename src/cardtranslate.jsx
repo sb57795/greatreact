@@ -8,35 +8,19 @@ function WordCard  (props) {
         setIsTranslationVisible(true);
     };
 
-    return (
+    return ( 
+        
+           
         <div className="word-card">
-            <h2>{props.word}</h2>
+            <h2>{props.words}</h2>
             {isTranslationVisible ? (
                 <p>{props.translate}</p>
             ) : (
                 <button onClick={handleShowTranslation}>Показать перевод</button>
             )}
         </div>
+        
     );
 };
 
 export default WordCard;
-
-
-
-/*function Card(props) {
-
-
-
-    return (
-        <div className="word-card">
-            
-                
-                <h4 className="card-title">{props.title}</h4>
-                <p className="card-text">{props.description}</p>
-            
-            
-            </div>
-    );
-}
-export default Card*/
