@@ -1,6 +1,7 @@
 import React from "react";
 import WordList from "./main";
 import WordCardViewer from "./asdfg";
+import Eror from "./error";
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,13 +19,16 @@ function App() {
     <div>
       <Router>
       <div>
+
+      <img src="" alt=""></img>
         <nav>
+         
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/game">Users</Link>
+              <Link to="/game">Game</Link>
             </li>
           </ul>
         </nav>
@@ -32,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<WordList />} />
           <Route path="/game" element={<WordCardViewer  words={words}/>} />
+          <Route path="*" element={<Eror/>} />
         </Routes>
       </div>
     </Router>
