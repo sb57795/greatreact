@@ -20,7 +20,7 @@ function App() {
       <Router>
       <div>
 
-      <img src="" alt=""></img>
+      <img src="photo_2024-12-04_12-39-30.jpg" alt=""></img>
         <nav>
          
           <ul>
