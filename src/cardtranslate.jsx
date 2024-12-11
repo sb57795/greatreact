@@ -1,26 +1,23 @@
+
 import React, { useState } from 'react';
 
-function WordCard(props) {
-    const { words, translate, onViewTranslation } = props; // Извлечение пропсов
-    const [isTranslationVisible, setIsTranslationVisible] = useState(false);
+const WordCard = ({ word, translation, onWordStudied }) => {
+    const [showTranslation, setShowTranslation] = useState(false);
 
     const handleShowTranslation = () => {
-        setIsTranslationVisible(true);
-        
+        setShowTranslation(true);
+        onWordStudied(); // Увеличиваем счетчик изученных слов
     };
 
     return (
         <div className="word-card">
-            <h2>{words}</h2>
-            {isTranslationVisible ? (
-                <p>{translate}</p>
-            ) : (
-                <button onClick={handleShowTranslation}>
-                    Показать перевод
-                </button>
-            )}
+            <h3>{word}</h3>
+            <button onClick={handleShowTranslation}>
+                {showTranslation ? translation : 'Посмотреть перевод'}
+            </button>
         </div>
     );
 };
 
 export default WordCard;
+

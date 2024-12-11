@@ -5,8 +5,6 @@ function WordCardViewer(props) {
     const { words, onViewTranslation } = props; 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    
-
     const nextWord = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
     };
@@ -21,8 +19,8 @@ function WordCardViewer(props) {
         <div>
             <WordCard 
                 word={words[currentIndex].word} 
-                translate={words[currentIndex].translate} 
-                onViewTranslation={onViewTranslation}
+                translation={words[currentIndex].translation} 
+                onWordStudied={onViewTranslation}
             />
             <div className="navigation">
                 <button onClick={previousWord} disabled={currentIndex === 0}>Предыдущее</button>

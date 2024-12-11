@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
 import WordCardViewer from './asdfg';
 
-const ParentComponent = () => {
+const WordTrainer = () => {
     const [studiedWordsCount, setStudiedWordsCount] = useState(0);
-    const wordsList = [
-        { word: 'Привет', translate: 'Hello' },
-        { word: 'Спасибо', translate: 'Thank you' },
-        { word: 'До свидания', translate: 'Goodbye' },
-    ];
-
-    const handleViewTranslation = () => {
-        setStudiedWordsCount(studiedWordsCount + 1);
+    
+    const handleWordStudied = () => {
+        setStudiedWordsCount(prevCount => prevCount + 1);
     };
+
+    const words = [
+        { id: 1, word: 'Hello', translation: 'Привет' },
+        { id: 2, word: 'World', translation: 'Мир' },
+        // ... другие слова
+    ];
 
     return (
         <div>
-            <h1>Изученные слова: {studiedWordsCount}</h1>
-            <WordCardViewer 
-                words={wordsList} 
-                onViewTranslation={handleViewTranslation} // Убедитесь, что это передается правильно
-            />
+            <h1>Словарь</h1>
+            <h2>Изучено слов: {studiedWordsCount}</h2>
+            <WordCardViewer words={words} onViewTranslation={handleWordStudied} />
         </div>
     );
 };
 
-export default ParentComponent;
-
+export default WordTrainer;
 
